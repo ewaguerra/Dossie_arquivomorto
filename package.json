@@ -1,0 +1,13 @@
+{
+  "name": "dossie-arquivista",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Protocolo 13 Almas — Arquivista. Desktop simulado forense do ARG.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/http.test.js tests/contract.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
