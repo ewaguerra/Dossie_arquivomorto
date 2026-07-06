@@ -1,5 +1,5 @@
 {
-  "centro": "/centro/",
+  "centro": "https://dossie-centro.vercel.app/centro/",
   "landing": "/landing/",
   "arquivo-morto": "/arquivo-morto/"
 }

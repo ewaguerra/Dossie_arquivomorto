@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_ROOT = join(__dirname, "..");
 
 const DEFAULTS = {
-  centro: "/centro/",
+  centro: "https://dossie-centro.vercel.app/centro/",
   landing: "/landing/",
   "arquivo-morto": "/arquivo-morto/",
 };

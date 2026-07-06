@@ -5,7 +5,7 @@
   "use strict";
 
   var SURFACE_LINK_DEFAULTS = {
-    centro: "/centro/",
+    centro: "https://dossie-centro.vercel.app/centro/",
     landing: "/landing/",
     "arquivo-morto": "/arquivo-morto/",
   };
