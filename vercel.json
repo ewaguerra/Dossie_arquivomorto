@@ -1,7 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "buildCommand": "node scripts/generate-surface-links.mjs",
+  "buildCommand": "node scripts/vercel-build.mjs",
+  "outputDirectory": "public",
   "installCommand": "echo skip",
   "framework": null,
   "trailingSlash": false,

@@ -5,7 +5,7 @@
   "description": "Protocolo 13 Almas — Arquivista. Desktop simulado forense do ARG.",
   "type": "module",
   "scripts": {
-    "build": "node scripts/generate-surface-links.mjs",
+    "build": "node scripts/vercel-build.mjs",
     "test": "node --test tests/http.test.js tests/contract.test.js"
   },
   "engines": {
