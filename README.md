@@ -32,6 +32,46 @@ system, já copiado aqui).
 
 ---
 
+## Deploy na Vercel
+
+Site estático — sem bundler. O `vercel.json` replica o roteamento do
+`server.py` (redirect, `/app/` → `vendor/app/`, headers de cache).
+
+### Passo a passo
+
+1. Importe o repositório em [vercel.com/new](https://vercel.com/new)
+2. Framework Preset: **Other** (detectado automaticamente pelo `vercel.json`)
+3. Deploy — a URL principal será `/arquivista/`
+
+### Rotas em produção
+
+| Rota | Descrição |
+|------|-----------|
+| `/` | Redirect para `/arquivista/` |
+| `/arquivista/` | Desktop simulado (app principal) |
+| `/landing/` | Portal de acesso (incluído neste repo) |
+| `/app/*` | Design system (`vendor/app/`) |
+| `/config/surface-links.json` | Links das outras superfícies |
+| `/centro/`, `/arquivo-morto/` | 404 (superfícies externas — configure URLs abaixo) |
+
+### Links externos (multi-domínio)
+
+No painel Vercel → **Settings → Environment Variables**, defina:
+
+| Variável | Exemplo |
+|----------|---------|
+| `SURFACE_LINK_CENTRO` | `https://centro.seudominio.com/` |
+| `SURFACE_LINK_LANDING` | `https://landing.seudominio.com/` |
+| `SURFACE_LINK_ARQUIVO_MORTO` | `https://arquivo.seudominio.com/` |
+
+O build (`scripts/generate-surface-links.mjs`) grava esses valores em
+`config/surface-links.json`. Veja `.env.example`.
+
+Se todas as superfícies estiverem no **mesmo** deploy Vercel, os defaults
+relativos (`/landing/`, etc.) já funcionam para a Landing incluída neste repo.
+
+---
+
 ## Como testar
 
 ```bash
