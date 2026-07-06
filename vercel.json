@@ -5,7 +5,7 @@
   "outputDirectory": "public",
   "installCommand": "echo skip",
   "framework": null,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/",
